@@ -36,7 +36,7 @@
 	var/icon_sit = "parrot_sit"
 	density = FALSE
 	health = 80
-	maxealth = 80
+	maxHealth = 80
 	pass_flags = PASSTABLE | PASSMOB
 
 	speak = list("Hi!","Hello!","Cracker?","BAWWWWK george mellons griffing me!")
