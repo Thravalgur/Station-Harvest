@@ -39,7 +39,7 @@
 	maxealth = 80
 	pass_flags = PASSTABLE | PASSMOB
 
-	speak = list("i!","ello!","Cracker?","BAWWWWK george mellons griffing me!")
+	speak = list("Hi!","Hello!","Cracker?","BAWWWWK george mellons griffing me!")
 	speak_emote = list("squawks","says","yells")
 	emote_hear = list("squawks.","bawks!")
 	emote_see = list("flutters their wings.")
