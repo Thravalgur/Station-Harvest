@@ -36,10 +36,10 @@
 	var/icon_sit = "parrot_sit"
 	density = FALSE
 	health = 80
-	maxHealth = 80
+	maxealth = 80
 	pass_flags = PASSTABLE | PASSMOB
 
-	speak = list("Hi!","Hello!","Cracker?","BAWWWWK george mellons griffing me!")
+	speak = list("i!","ello!","Cracker?","BAWWWWK george mellons griffing me!")
 	speak_emote = list("squawks","says","yells")
 	emote_hear = list("squawks.","bawks!")
 	emote_see = list("flutters their wings.")
@@ -865,8 +865,8 @@ GLOBAL_LIST_INIT(strippable_parrot_items, create_strippable_list(list(
 /mob/living/simple_animal/parrot/proc/perch_on_human(mob/living/carbon/human/human_target)
 	if(!human_target)
 		return
-	forceMove(get_turf(H))
-	if(H.buckle_mob(src, TRUE))
+	forceMove(get_turf(human_target))
+	if(human_target.buckle_mob(src, TRUE))
 		pixel_y = 9
 		pixel_x = pick(-8,8) //pick left or right shoulder
 		icon_state = icon_sit
@@ -910,10 +910,10 @@ GLOBAL_LIST_INIT(strippable_parrot_items, create_strippable_list(list(
 		return FALSE
 	if(!(findtext(message, "poly")))
 		return FALSE
-	if(findtext(message, "perch") || findtext(message, "up"))
+	if(findtext(message, "perch") || findtext(message, "up") || findtext(message, "monte") || findtext(message, "viens"))
 		command_perch(speaker)
 		return TRUE
-	else if(findtext(message, "off") || findtext(message, "down"))
+	else if(findtext(message, "off") || findtext(message, "down") || findtext(message, "descend") || findtext(message, "pars"))
 		command_hop_off(speaker)
 		return TRUE
 	else
